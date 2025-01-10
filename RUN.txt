@@ -1,0 +1,5 @@
+http://localhost/webPractical%20Ty%20Sem%206/login.php
+
+http://localhost/webPractical%20Ty%20Sem%206/employee_details.php
+
+http://localhost/webPractical%20Ty%20Sem%206/customer_info.php
