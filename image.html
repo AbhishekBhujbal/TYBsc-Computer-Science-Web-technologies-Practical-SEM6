@@ -1,0 +1,15 @@
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+ $(document).ready(function () {
+   $("#image").before("<p>Text before the image.</p>");
+   $("#image").after("<p>Text after the image.</p>");
+ });
+</script>
+</head>
+<body>
+<h1>Insert Text with jQuery</h1>
+<img id="image" src="https://picsum.photos/200/300" alt="Example Image">
+</body>
+</html>

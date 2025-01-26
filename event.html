@@ -1,0 +1,35 @@
+<html>
+<head>
+<style>
+ #studentName { font-size: 16px; color: black; }
+ #image { display: none; transition: 0.3s; width: 300px; height: 200px; }
+</style>
+<script>
+ function handleBlur() {
+   const nameInput = document.getElementById("studentName");
+   const img = document.getElementById("image");
+   if (nameInput.value.trim() !== "") {
+     nameInput.style.color = "red";
+     nameInput.style.fontSize = "18px";
+   } else {
+     img.style.display = "block";
+   }
+ }
+ function changeImageSize(size) {
+   const img = document.getElementById("image");
+   img.style.width = size.width;
+   img.style.height = size.height;
+ }
+</script>
+</head>
+<body onload="console.log('Page Loaded!')">
+<h1>Enter Student Name</h1>
+<input type="text" id="studentName" placeholder="Enter your name" onblur="handleBlur()">
+<br><br>
+<img id="image" src="https://picsum.photos/200/300" alt="Placeholder"
+ onmouseover="changeImageSize({width: '400px', height: '300px'})"
+ onmouseout="changeImageSize({width: '300px', height: '200px'})"
+ onclick="alert('Image clicked!')"
+ onmouseup="console.log('Mouse released on image')">
+</body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Exam Preparation</title>
+    <script>
+      function examPreparation() {
+        alert("Exams are near, have you started preparing for them?");
+
+        const startedPreparing = confirm(
+          "Have you started preparing for your exams?"
+        );
+        if (startedPreparing) {
+          const studyHours = prompt(
+            "Great! How many hours are you studying daily?"
+          );
+
+          if (studyHours && !isNaN(studyHours)) {
+            alert(
+              `Well done! Studying ${studyHours} hours daily is a good habit. Keep it up!`
+            );
+          } else {
+            alert("Please make sure to plan your study hours. Stay focused!");
+          }
+        } else {
+          alert(
+            "It's never too late to start preparing. Begin your studies today and good luck!"
+          );
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Exam Preparation Reminder</h1>
+    <button onclick="examPreparation()">Start Exam Preparation Check</button>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+<head>
+<style>
+ .error { color: red; font-size: 14px; }
+</style>
+<script>
+ function validateForm(event) {
+   event.preventDefault();
+   const username = document.getElementById("username").value.trim();
+   const password = document.getElementById("password").value.trim();
+   const usernameError = document.getElementById("usernameError");
+   const passwordError = document.getElementById("passwordError");
+   usernameError.textContent = passwordError.textContent = "";
+
+   if (username.length < 4 || username.length > 12) 
+     usernameError.textContent = "Username must be 4-12 characters.";
+   if (password.length < 6 || !/[A-Z]/.test(password) || 
+       !/[a-z]/.test(password) || !/[0-9]/.test(password)) 
+     passwordError.textContent = "Password must be 6+ chars with upper, lower, and number.";
+   if (!usernameError.textContent && !passwordError.textContent) 
+     alert("Form submitted successfully!");
+ }
+</script>
+</head>
+<body>
+<h1>Membership Form</h1>
+<form id="membershipForm" onsubmit="validateForm(event)">
+ <label>Username:</label><br>
+ <input type="text" id="username"><br>
+ <span id="usernameError" class="error"></span><br>
+ <label>Password:</label><br>
+ <input type="password" id="password"><br>
+ <span id="passwordError" class="error"></span><br>
+ <button type="submit">Submit</button>
+</form>
+</body>
+</html>

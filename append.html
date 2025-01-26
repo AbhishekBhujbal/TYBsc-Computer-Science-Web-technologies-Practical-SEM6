@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#appendParagraph").click(function () {
+          $("#myParagraph").append(" This is the appended text.");
+        });
+
+        $("#appendListItem").click(function () {
+          $("#myList").append("<li>New List Item</li>");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>jQuery Append Example</h1>
+    <p id="myParagraph">This is the original paragraph.</p>
+    <button id="appendParagraph">Append Text to Paragraph</button>
+    <ol id="myList">
+      <li>First item</li>
+      <li>Second item</li>
+      <li>Third item</li>
+    </ol>
+    <button id="appendListItem">Append Item to List</button>
+  </body>
+</html>
